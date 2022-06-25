@@ -1,0 +1,390 @@
+﻿<Window x:Class="_20104056Assignment2021Task3POE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_20104056Assignment2021Task3POE"
+        mc:Ignorable="d"
+        Title="Budget Application" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="147*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <TabControl x:Name="myTabControl" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <TabItem Header="HOME">
+                <StackPanel>
+
+
+                    <TextBlock Text="Personal Budget Application" 
+                               FontSize="36" 
+                               FontFamily="SimSun-ExtB" 
+                               FontWeight="Bold" 
+                               TextDecorations="Underline" 
+                               TextAlignment="Center" Width="542"
+                               />
+                    <TextBlock Text="Programming POE 2021" 
+                               FontFamily="Curlz MT" 
+                               FontSize="20" 
+                               TextAlignment="Center" Width="507"
+                               />
+                    <TextBlock Text="Varsity College" 
+                               FontFamily="Freestyle Script" 
+                               FontSize="20" 
+                               TextAlignment="Center" Width="509"
+                               />
+                    <TextBlock Text="Thaveshan Naidoo" 
+                               FontFamily="Blackadder ITC" 
+                               FontSize="20" 
+                               TextAlignment="Center" Width="522"
+                               />
+                    <TextBlock Text="20104056" 
+                               FontFamily="Broadway" 
+                               FontSize="20" 
+                               TextAlignment="Center" Width="522"
+                               />
+                    <TextBlock Text="VCSD 2" 
+                               FontFamily="Juice ITC" 
+                               FontSize="20" 
+                               TextAlignment="Center" Width="517"
+                               />
+                    <Button x:Name="StartButton" 
+                            Content="Click Here To Start" 
+                            Height="249" 
+                            Background="#FF42F7C0" 
+                            Click="StartButton_Click" 
+                            FontSize="72" 
+                            FontFamily="Bodoni MT Condensed"
+                            />
+
+
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="INPUT EXPENSES">
+                <StackPanel>
+
+
+                    <TextBlock Text="Enter your Monthly Gross Income:" 
+                               TextWrapping="Wrap"
+                               />
+                    <TextBox x:Name="TB1" 
+                             BorderBrush="#FF58FC00" 
+                             />
+
+                    <TextBlock Text="Enter your TAX Expense:" 
+                               TextWrapping="Wrap"
+                               />
+                    <TextBox x:Name="TB2"  
+                             BorderBrush="#FFFF4600" 
+                             />
+
+
+                    <TextBlock Text="Enter your Groceries Expense:" 
+                               TextWrapping="Wrap"
+                               />
+                    <TextBox x:Name="TB3" 
+                             BorderBrush="#FFFF4600" 
+                             />
+
+                    <TextBlock Text="Enter your Water and Lights Expense:" 
+                               TextWrapping="Wrap"
+                               />
+                    <TextBox x:Name="TB4" 
+                             BorderBrush="#FFFF4600" 
+                             />
+
+                    <TextBlock Text="Enter your Travel Expense:" 
+                               TextWrapping="Wrap"
+                               />
+                    <TextBox x:Name="TB5" 
+                             BorderBrush="#FFFF4600" 
+                             />
+
+                    <TextBlock Text="Enter your Cell Phone Expense:" 
+                               TextWrapping="Wrap"
+                               />
+                    <TextBox x:Name="TB6" 
+                             BorderBrush="#FFFF4600" 
+                             />
+
+                    <TextBlock Text="Enter your Other Expenses:" 
+                               TextWrapping="Wrap"
+                               />
+                    <TextBox x:Name="TB7" 
+                             BorderBrush="#FFFF4600" 
+                             />
+
+                    <Button x:Name ="ExpensesBTN" 
+                            Height="172" 
+                            Content="Press to store values and PROCEED" 
+                            FontFamily="Bodoni MT Condensed" 
+                            Background="#FF0FEEE7" 
+                            FontSize="20" 
+                            Click="ExpensesBTN_Click"
+                            />
+
+
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="MENU" HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="54">
+                <StackPanel>
+                    <TextBlock Text="Please select an option: (Ensure that all the expenses values have been filled in.)" 
+                               TextWrapping="Wrap"
+                               />
+                    <Button x:Name ="RentPropertyBTN"  
+                            Height="83" 
+                            Content="Rent Property" 
+                            FontFamily="Bodoni MT Condensed" 
+                            Width="790" 
+                            Background="#FFF73916" 
+                            FontSize="20" 
+                            Click="RentPropertyBTN_Click"
+                            />
+                    <Button x:Name ="BuyPropertyBTN"  
+                            Height="80" 
+                            Content="Buy Property" 
+                            FontFamily="Bodoni MT Condensed" 
+                            Width="790" 
+                            Background="#FF46EDB5" 
+                            FontSize="20" 
+                            Click="BuyPropertyBTN_Click"
+                            />
+                    <Button x:Name ="BuyVehicleBTN"  
+                            Height="75" 
+                            Content="Buy Vehicle" 
+                            FontFamily="Bodoni MT Condensed" 
+                            Width="790" 
+                            Background="#FF6AE8F1" 
+                            FontSize="20" 
+                            Click="BuyVehicleBTN_Click"
+                            />
+                    <Button x:Name ="AvailableMoneyBTN"  
+                            Height="75" 
+                            Content="Available Money" 
+                            FontFamily="Bodoni MT Condensed" 
+                            Width="790" 
+                            Background="#FFEEE656" 
+                            FontSize="20" 
+                            Click="AvailableMoneyBTN_Click"
+                            />
+                    <Button x:Name ="SaveBTN"  
+                            Height="75" 
+                            Content="Save" 
+                            FontFamily="Bodoni MT Condensed" 
+                            Width="790" 
+                            Background="#FF5EF829" 
+                            FontSize="20" 
+                            Click="SaveBTN_Click"
+                            />
+
+
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="RENT PROPERTY" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="116" Margin="0,-1,0,0">
+                <StackPanel>
+
+                    <TextBlock Text="Please Enter your rent amount:"/>
+                    <TextBox x:Name="Rent" 
+                             BorderBrush="#FFFF3E00" 
+                             Height="83"
+                             />
+                    <Button x:Name="RentBTN" 
+                            Content="Press to Calculate Rent Amount" 
+                            FontFamily="Bodoni MT Condensed" 
+                            Height="135" 
+                            Background="#FF0FEEE7" 
+                            FontSize="20" 
+                            Click="RentBTN_Click"
+                            />
+                    <TextBlock Text="The Rent Amount is: "/>
+                    <TextBox x:Name="DisplayRent" 
+                             IsReadOnly="True" 
+                             Height="144" 
+                             BorderBrush="#FF5FF719" 
+                             Background="#FF8DF21B"
+                             />
+
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="BUY PROPERTY" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="114" Margin="0,-1,0,0">
+                <StackPanel>
+
+
+                    <TextBlock Text="Enter the purchase price of the property:"/>
+                    <TextBox x:Name="PurchasePrice" 
+                             BorderBrush="#FFF6460E"
+                             />
+                    <TextBlock Text="Enter the total deposit:"/>
+                    <TextBox x:Name="Total_Deposit" 
+                             BorderBrush="#FFF82E11"
+                             />
+                    <TextBlock Text="Enter the interest rate of the property:"/>
+                    <TextBox x:Name="Interest_Rate" 
+                             BorderBrush="#FFF23522"
+                             />
+                    <TextBlock Text="Enter the numnber of months, between 240-360:"/>
+                    <TextBox x:Name="MonthsBox" 
+                             BorderBrush="#FFF54525"
+                             />
+                    <Button x:Name="BuyPropertyButton" 
+                            Content="Press to Calculate Monthly Repayments" 
+                            FontFamily="Bodoni MT Condensed" 
+                            Height="128" 
+                            Background="#FF25F1EA" 
+                            FontSize="20" 
+                            Click="BuyPropertyButton_Click"
+                            />
+                    <TextBlock Text="The Monthly Repayments Are:"/>
+                    <TextBox x:Name="DisplayMonthlyRepayments" 
+                             IsReadOnly="True" 
+                             Height="128" 
+                             Background="#FF46F612"
+                             />
+
+
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="BUY VEHICLE" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="98" Margin="0,-1,0,0">
+                <StackPanel Height="413">
+
+
+                    <TextBlock Text="Enter the Make of the car:"/>
+                    <TextBox x:Name="carMake" 
+                             BorderBrush="#FF2248FB"
+                             />
+                    <TextBlock Text="Enter the Model of the car:"/>
+                    <TextBox x:Name="carModel" 
+                             BorderBrush="#FF1F58F5"
+                             />
+                    <TextBlock Text="Enter the Purchase Price of the car:"/>
+                    <TextBox x:Name="carPurchasePrice" 
+                             BorderBrush="#FFE94E24"
+                             />
+                    <TextBlock Text="Enter the Total Deposit of the car:"/>
+                    <TextBox x:Name="carTotalDeposit" 
+                             BorderBrush="#FFF35639"
+                             />
+                    <TextBlock Text="Enter the Interest Rate of the car:"/>
+                    <TextBox x:Name="carInterestRate" 
+                             BorderBrush="#FFF25235"
+                             />
+                    <TextBlock Text="Enter the Insurance Premium of the car:"/>
+                    <TextBox x:Name="carInsurancePremium" 
+                             BorderBrush="#FFF74338"
+                             />
+
+                    <Button x:Name="carCalculate" 
+                            Content="Press to Calculate Summary" 
+                            FontFamily="Bodoni MT Condensed" 
+                            Height="45" 
+                            Background="#FF4FE9DB" 
+                            FontSize="20" 
+                            Click="carCalculate_Click" 
+                            />
+
+                    <TextBlock Text="SUMMARY:"/>
+
+                    <TextBox x:Name="carSummary" 
+                             IsReadOnly="True" 
+                             Height="140" 
+                             Background="#FF76FF18"/>
+
+
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="AVAILABLE MONEY" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="134" Margin="0,-1,0,0">
+                <StackPanel>
+                    <TextBlock Text="Account Balance"
+                               FontFamily="Bodoni MT Condensed" 
+                               FontSize="20" />
+                    <Button x:Name="AvailableMoneyButton" 
+                            Content="Press to Calculate the Available Money" 
+                            Height="79" 
+                            Background="#FF42EDED" 
+                            FontFamily="Bodoni MT Condensed" 
+                            FontSize="20" 
+                            Click="AvailableMoneyButton_Click"
+                            />
+
+                    <TextBlock Text="The available money is:"/>
+                    <TextBox x:Name="DisplayAvailableMoney" 
+                             IsReadOnly="True" 
+                             Background="#FF76FF18" 
+                             Height="63"
+                             />
+
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="SAVE" HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="54">
+                <StackPanel>
+
+
+                    <TextBlock Text="Enter Amount Your Wish To Save:"/>
+                    <TextBox x:Name="SaveAmount" 
+                             BorderBrush="#FF6AFB12" 
+                             Height="43"
+                             />
+                    <TextBlock Text="Enter the Interest Rate"/>
+                    <TextBox x:Name="SaveInterest" 
+                             BorderBrush="#FF6AFB12" 
+                             Height="39"
+                             />
+                    <TextBlock Text="Enter the Period in years:"/>
+                    <TextBox x:Name="yearAmount" 
+                             BorderBrush="#FF6AFB12" 
+                             Height="49"
+                             />
+                    <Button x:Name="SaveButton" 
+                            Content="Press to Calculate Total Savings and Monthly Savings Amount" 
+                            Height="77" 
+                            BorderBrush="#FF07C1F3" 
+                            Background="#FF1EEEE8" 
+                            FontSize="20" 
+                            FontFamily="Bodoni MT Condensed" 
+                            Click="SaveButton_Click"
+                            />
+                    <TextBlock Text="The Total Savings Amount:"/>
+                    <TextBox x:Name="DisplayTotalSavingsAmount" 
+                             IsReadOnly="True" 
+                             BorderBrush="#FF1A43BD" 
+                             Height="57" 
+                             Background="#FF76FF18"
+                             />
+                    <TextBlock Text="The Monthly Savings Amount:"/>
+                    <TextBox x:Name="DisplayMonthlySavingsAmount" 
+                             IsReadOnly="True" 
+                             BorderBrush="#FF234FD4" 
+                             Height="59" 
+                             Background="#FF76FF18"
+                             />
+
+
+                </StackPanel>
+            </TabItem>
+
+
+        </TabControl>
+
+
+    </Grid>
+</Window>

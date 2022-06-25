@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>_20104056Assignment2021Task3POE</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="IMG-20190327-WA0055.jpg" />
+    <None Remove="pic1.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="IMG-20190327-WA0055.jpg" />
+    <Resource Include="pic1.jpg" />
+  </ItemGroup>
+
+</Project>
